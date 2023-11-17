@@ -35,8 +35,9 @@ nav ul {
 }
 
 nav li {
-    display: inline;
-    margin-right: 3.25vw;
+    display: inline-block;
+    margin-right: 3.255vw;
+    position: relative;
 }
 
 nav a {
@@ -44,11 +45,48 @@ nav a {
     color: #333;
     font-weight: bold;
     font-size: 1.04vw;
+    position: relative;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0.195vw;
+    background-color: #3498db;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+nav a:hover::before,
+nav a.active::before {
+    animation: underline-expand 0.8s ease-in-out;
+    animation-fill-mode: both;
+    bottom: -0.33vw;
+}
+
+@keyframes underline-expand {
+    0% {
+        width: 0;
+        left: 50%;
+    }
+
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 100%;
+        left: 0;
+    }
 }
 
 nav a:hover {
     color: rgb(255, 196, 190);
 }
+
 
 .section {
     padding: 3.25vw 0;
@@ -236,7 +274,7 @@ footer {
 
 .modal-content {
     margin: 5% auto;
-    padding: 1.30vw;    
+    padding: 1.30vw;
     background-color: #fefefe;
     border: 0.065vw solid #888;
     width: 60%;
