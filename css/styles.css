@@ -87,6 +87,50 @@ nav a:hover {
     color: rgb(255, 196, 190);
 }
 
+.toggler {
+    display: none;
+    font-size: 3vw;
+    cursor: pointer;
+    padding-right: 2vw;
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 4.35vw;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 0.97vw;
+        box-shadow: 0 0.65vw 0.65vw rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul.show {
+        display: block;
+        margin-top: 10px;
+    }
+
+    nav li {
+        display: block;
+        margin: 1.5vw 0;
+        text-align: left;
+        margin-left: 2vw;
+    }
+
+    nav li a {
+        font-size: 2vw;
+    }
+
+    .toggler {
+        display: block;
+    }
+
+    .brand{
+        font-size:2.5vw;
+    }
+}
 
 .section {
     padding: 3.25vw 0;
@@ -336,7 +380,7 @@ footer {
 .projects-table td {
     border-radius: 0.97vw;
     padding: 0.97vw;
-    min-width: 5vw;
+    min-width: 10vw;
     transition: background-color 0.3s ease-in-out;
 }
 

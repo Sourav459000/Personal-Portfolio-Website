@@ -40,3 +40,7 @@ function openEmailClient() {
     window.location.href = mailtoLink;
 }
   
+function toggleMenu() {
+    var navMenu = document.getElementById('nav-menu');
+    navMenu.classList.toggle('show');
+}
