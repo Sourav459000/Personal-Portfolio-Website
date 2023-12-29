@@ -19,7 +19,7 @@ Feel free to fork and customize this template for your personal portfolio. Updat
 
 Check out the live version [here](https://sourav459000.github.io/Personal-Portfolio-Website/).
 
-MIT License
+## MIT License
 
 Copyright (c) 2023 Sourav Toshniwal
 
