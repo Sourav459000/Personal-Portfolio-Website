@@ -14,7 +14,7 @@ document.getElementById('intro-text').addEventListener('mouseout', function () {
 });
 
 function downloadResume() {
-    var link = document.getElementById('hidden-download-link');
+    var link = document.getElementById('hidden-download-link'); 
     link.click();
 }
 

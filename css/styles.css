@@ -1,8 +1,14 @@
+:root {
+    --colorGrad1: #a8edea;
+    --colorGrad2: #fed6e3;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #a8edea, #fed6e3);
+    background: linear-gradient(to right, var(--colorGrad1), var(--colorGrad2));
+    user-select: none;
 }
 
 nav {
