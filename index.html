@@ -1,16 +1,258 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="/favicon1.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="favicon/favicon1.ico" type="image/x-icon">
   <title>Sourav Toshniwal</title>
 </head>
 
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="brand">My Portfolio</h1>
+      <div class="toggler" onclick="toggleMenu()">☰</div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="intro">
+        <img src="images/sourav.png" alt="Your Photo" class="profile-photo">
+        <div class="text-intro">
+          <p id="intro-text">Hi, I am Sourav</p>
+          <p id="profession">A Software Developer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-me" class="section">
+    <div class="about-me-box">
+      <h2>About Me</h2>
+      <p>Hello!🌟, I'm currently pursuing my Bachelor's of Technology in <strong>Computer Science and
+          Engineering</strong>, with a
+        specialization in <strong>Artificial Intelligence and Edge Computing</strong>🧠💻. As a dedicated and
+        enthusiastic student, I'm
+        passionate about technology and constantly striving to expand my knowledge and skills🚀📈.</p>
+
+      <p>I enjoy building projects using <strong>Python</strong>, and I'm well-versed in a
+        range of programming languages,
+        including <strong>Java, C++, C,</strong> and more. While I'm still in the process of learning, I'm
+        excited about the
+        world of <strong>web development</strong> and currently exploring <strong>frontend development</strong>. My journey is
+        all about growth, and I'm eager to
+        take on new challenges and enhance my skills💡.</p>
+
+      <p>In addition to my academic pursuits, I've earned several valuable certifications🏅. These certifications
+        reflect my commitment to honing my skills and staying up-to-date with the latest trends in technology. 🔍</p>
+
+      <p>I'm a firm believer in the philosophy of lifelong learning and am always eager to share my knowledge and
+        experiences with others🌐. I'm open to new opportunities and collaborations, and I'm excited to connect with
+        like-minded individuals in the tech and programming world🤝.</p>
+
+      <p>Let's connect and explore the exciting world of technology together!🚀</p>
+
+      <p>Feel free to grab a copy of my resume right here!</p>
+      <button id="download-resume" onclick="downloadResume()">Download Resume</button>
+      <a href="resources/SouravResume.pdf" id="hidden-download-link" download></a>
+    </div>
+  </section>
+
+  <div id="certificatesModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCertificatesModal()">&times;</span>
+      <embed src="" type="application/pdf" id="certificateEmbed" width="100%" height="100%">
+    </div>
+  </div>
+
+  <section id="skills" class="section">
+    <div class="skills-box">
+      <h2>Skills</h2>
+      <div class="skill" onclick="showCertificates('python')">
+        <img src="images/python.png" alt="Python Logo">
+        <p>Python</p>
+      </div>
+      <div class="skill">
+        <img src="images/java.png" alt="Java Logo">
+        <p>Java</p>
+      </div>
+      <div class="skill" onclick="showCertificates('sql')">
+        <img src="images/mysql.jpg" alt="MySQL Logo">
+        <p>MySQL</p>
+      </div>
+      <div class="skill" onclick="showCertificates('cpp')">
+        <img src="images/cpp.png" alt="cpp Logo">
+        <p>C++</p>
+      </div>
+      <div class="skill" onclick="showCertificates('c')">
+        <img src="images/c.png" alt="c Logo">
+        <p>C</p>
+      </div>
+      <div class="skill">
+        <img src="images/html.png" alt="html Logo">
+        <p>HTML</p>
+      </div>
+      <div class="skill" onclick="showCertificates('css')">
+        <img src="images/css.png" alt="css Logo">
+        <p>CSS</p>
+      </div>
+      <div class="skill">
+        <img src="images/js.png" alt="js Logo">
+        <p>JavaScript</p>
+      </div>
+
+      <h2>Languages</h2>
+      <div class="language language-english" onclick="showCertificates('english')">
+        <p>English</p>
+      </div>
+      <div class="language language-hindi">
+        <p>Hindi</p>
+      </div>
+      <div class="language language-marathi">
+        <p>Marathi</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <div class="education-box">
+      <h2>Education</h2>
+
+      <table class="education-table">
+        <tr>
+          <td>
+            <strong>MIT-SOC, MIT ADT University, Pune</strong>
+            <p>Bachelor of Technology (CSE)</p>
+          </td>
+          <td>
+            <p>10/2021 - Present</p>
+            <p>Result: 8.49 CGPA (as of now)</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <strong>Varqa School and Junior College, Ahmednagar</strong>
+            <p>Higher Secondary School Certificate</p>
+          </td>
+          <td>
+            <p>03/2019 - 02/2020</p>
+            <p>Result: 70.92%</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <strong>Varqa School and Junior College, Ahmednagar</strong>
+            <p>Secondary School Certificate</p>
+          </td>
+          <td>
+            <p>04/2017 - 03/2018</p>
+            <p>Result: 88.2%</p>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="projects-box">
+      <h2>Projects</h2>
+      
+      <table class="projects-table">
+
+        <tr>
+          <td>
+            <strong>Personal Portfolio Website</strong>
+            <p>The portfolio website you are currently viewing!</p>
+          </td>
+          <td>
+            <p>GitHub Repo: <a href="https://github.com/Sourav459000/Personal-Portfolio-Website" target="_blank">Link</a></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <strong>Touropedia</strong>
+            <p>Explore Pune with our Tkinter Python app: rate, discover, and connect for a personalized journey through diverse themes.</p>
+          </td>
+          <td>
+            <p>GitHub Repo: <a href="https://github.com/Sourav459000/Touropedia" target="_blank">Link</a></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <strong>More Python Projects</strong>
+            <p>A repository of diverse coding challenges, perfect for hands-on learning and honing your Python skills.</p>
+          </td>
+          <td>
+            <p>GitHub Repo: <a href="https://github.com/Sourav459000/Python-Projects" target="_blank">Link</a></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <strong>More Web Development Projects</strong>
+            <p>Dive into web development with hands-on HTML, CSS, and Js projects, enhancing your skills in creating interactive web applications.</p>
+          </td>
+          <td>
+            <p>GitHub Repo: <a href="https://github.com/Sourav459000/Web-Development-Projects" target="_blank">Link</a></p>
+          </td>
+        </tr>
+
+      </table>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="contact-box">
+      <h2>Contact Me</h2>
+      <p class="catchy-line">Feel free to reach out. I'm just a message away!</p>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <img src="images/phone.png" alt="Phone Icon">
+          <p>+91 9225125192</p>
+        </div>
+
+        <div class="contact-item" onclick="openEmailClient()">
+          <img src="images/email.png" alt="Email Icon">
+          <p>sourav280902@gmail.com</p>
+        </div>
+
+        <div class="contact-item">
+          <img src="images/github.png" alt="GitHub Icon">
+          <p><a class="contact-info" href="https://github.com/Sourav459000" target="_blank">GitHub</a></p>
+        </div>
+
+        <div class="contact-item">
+          <img src="images/linkedin.png" alt="LinkedIn Icon">
+          <p><a class="contact-info" href="https://www.linkedin.com/in/sourav-toshniwal-b21513223/"
+              target="_blank">LinkedIn</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Sourav Toshniwal. All rights reserved.</p>
+  </footer>
+
+  <script src="Js/script.js"></script>
 </body>
 
 </html>
